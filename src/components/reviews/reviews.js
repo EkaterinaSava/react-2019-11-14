@@ -8,14 +8,15 @@ class Reviews extends Component {
   static defaultProps = {
     reviews: [],
   }
+
   render() {
     const {reviews, id} = this.props
+
     return (
       <Row type="flex" justify="center" gutter={{xs: 8, sm: 16, md: 24}}>
         <Col xs={24} md={16}>
           {reviews.map(reviewId => (
-            // <Review id={reviewId} key={reviewId} />
-            <div key={reviewId} />
+            <Review id={reviewId} key={reviewId} />
           ))}
           <ReviewForm id={id} />
         </Col>
